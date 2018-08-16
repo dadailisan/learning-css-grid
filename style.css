@@ -1,0 +1,31 @@
+/*Flexbox - one dimension
+Grid - two dimension*/
+
+.wrapper{
+	display: grid;
+	/*3 columns with this kind of percentage distribution
+	grid-template-columns: 40% 30% 30%;
+	2 columns with this kind of percentage distribution*/
+	grid-template-columns: 70% 30%;
+	/*put a separation between columns
+	grid-column-gap: 1em;
+	put a separation between rows
+	grid-row-gap: 1em;
+	this is how you put diffirent separation on columns and rows on shorter code
+	grid-gap: 1em 3em; row gap and column gap respectively
+	if columns and rows have the same separation measurement*/
+	grid-gap: 1em;
+	
+}
+
+/*for better viasualization we put backrgound on the divs*/
+.wrapper > div{
+	/*all div inside the wrapper class*/
+	background: #eeeeee;
+	padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+	/*all div that are odd inside the wrapper*/
+	background: #dddddd;
+}

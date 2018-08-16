@@ -1,0 +1,61 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-auto-rows: minmax(100px, auto);
+	grid-gap: 1em;
+	/*justifying
+	justify-items: stretch; which is the default
+	justify-items: start;
+	justify-items: center;
+	justify-items: end;*/
+	justify-items: stretch;
+	/*align-items
+	align-items: stretch; which is the default
+	align-items: start;
+	align-items: center;
+	align-items: end;*/
+	align-items: stretch;
+}
+
+/*appliying grid to self*/
+.box1{
+	/*align-self: start;*/
+	/*playing with grid*/
+	/*1 is the starting position depending on the number of columns and rows, 
+	you can arrange how much it accupies*/
+	grid-column: 1/3;
+	grid-row: 1/3;
+}
+
+.box2{
+	/*align-self: end;*/
+	grid-column: 3;
+	grid-row: 1/3;
+}
+
+.box3{
+ 	/*justify-self: end;*/
+ 	/*overlap*/
+ 	grid-column: 2/4; /*stay in position*/
+ 	grid-row: 3; /*take 2 to 3*/
+}
+
+.box4{
+	/*justify-self: start;*/
+	grid-column: 1;
+	grid-row: 2/4;
+	border: 1px solid #333333;
+}
+
+/*for better viasualization we put backrgound on the divs*/
+.wrapper > div{
+	/*all div inside the wrapper class*/
+	background: #eeeeee;
+	padding: 1em;
+}
+
+.wrapper > div:nth-child(odd){
+	/*all div that are odd inside the wrapper*/
+	background: #dddddd;
+}
+
